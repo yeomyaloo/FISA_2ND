@@ -1,10 +1,12 @@
-import java.util.*; // Java에서 사용되는 유틸 패키지 불러오기.
 
-public class HelloWorld {
-    public static void main(String[] args) {
-        System.out.print("YOUR NAME?: ");
+// 참고: package들을 주석 처리할 것.
+import java.io.*;
+import java.util.*;
+
+public class Boj16561 {
+    public static void main_(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String name = sc.nextLine();
+        int result=0;
 
         // 인풋이 이상할 수도 있음:
 //        int number = sc.nextInt();
@@ -12,16 +14,30 @@ public class HelloWorld {
 //        String asdfasdf = sc.nextLine();
 
         // 해결 사례:
-        System.out.print("number: ");
         int number = Integer.parseInt(sc.nextLine());
-        System.out.print("floatVal: ");
-        double floatVal = Double.parseDouble(sc.nextLine());
-        System.out.print("asdfasdf: ");
-        String asdfasdf = sc.nextLine();
-
-        System.out.println("HELLO, YOUR NAME IS: "+name );
-        System.out.printf("Input result: %d, %f, %s\n", number, floatVal, asdfasdf);
         sc.close();
+
+        for( int i=3;i<=number-3-3;i+=3){
+            for (int j=3;j<=number-3-i;j+=3){
+                result += 1;
+            }
+        }
+        System.out.println(result);
+    }
+
+    public static void mainImproved(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        int number = Integer.parseInt(br.readLine());
+        int result=0;
+        int jMin=3;
+        int kMin=3;
+
+        for( int i=3;i<=number-jMin-kMin;i+=3){
+            for (int j=3;j<=number-kMin-i;j+=3){
+                result += 1;
+            }
+        }
 
     }
 }
