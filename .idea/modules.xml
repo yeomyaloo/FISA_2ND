@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/FISA_2ND.iml" filepath="$PROJECT_DIR$/.idea/FISA_2ND.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fisa-2nd-algorithms.iml" filepath="$PROJECT_DIR$/fisa-2nd-algorithms.iml" />
     </modules>
   </component>
 </project>
